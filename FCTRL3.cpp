@@ -1,38 +1,31 @@
-#include<iostream>
-#include<cstdlib>
+#include <iostream>
 using namespace std;
-
-bool czy_pierwsza(int n)
-{
-    if(n<2)
-        return false;
-
-    for(int i=2; i*i<=n; i++)
-        if(n%i==0)
-            return false;
-    return true;
-}
-
+ 
 int main()
 {
-    int n;
-    int ile;
-    cin>>ile;
+    int t,n;
+    cin >> t;
+    for(int i = 0 ; i < t ; i++)
     {
-        for(int i =0; i<ile; i++)
-        {
-
-            cin>>n;
-            if   (czy_pierwsza(n))
-            cout<<"TAK\n";
-            else
-                cout<<"NIE\n";
-        }
-
-
-
+        cin >> n;
+        if(n==0 || n==1)/
+            cout << "0 " << "1" << endl;
+        else if(n==2)
+            cout << "0 " << "2" << endl;
+        else if(n==3)
+            cout << "0 " << "6" << endl;
+        else if(n==4)
+            cout << "2 " << "4" << endl;
+        else if(n==5 || n==6 || n ==8)
+            cout << "2 " << "0" << endl;
+        else if(n==7)
+            cout << "4 " << "0" << endl;
+        else if(n==9)
+            cout << "8 " << "0" << endl;
+        else
+            cout << "0 " << "0" << endl;
     }
-
-
+ 
     return 0;
 }
+ 
